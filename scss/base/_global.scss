@@ -1,0 +1,30 @@
+html {
+  background-color: $off-white;
+}
+
+body {
+  // background: $white;
+}
+
+body,
+html {
+  @extend %font-smoothing;
+  font-family            : 'Roboto';
+  font-weight            : 300;
+  font-size              : 16px;
+  line-height            : 24px;
+  letter-spacing         : 0;
+  color                  : $gray-color;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @media(max-width: 991px) {
+    font-size  : 13px;
+    line-height: 20px;
+  }
+}
+
+main {
+  @media (max-width: 991px) {
+    overflow-x: hidden;
+  }
+}

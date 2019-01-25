@@ -1,0 +1,51 @@
+.contact-intro {
+  padding-top: 180px;
+
+  .section-title {
+    margin-bottom: 50px;
+  }
+  @media(min-width: 991px) {
+    .split-content {
+      max-height: 330px;
+    }
+  }
+  @media(max-width: 991px) {
+    padding   : 0;
+    min-height: 100vh;
+
+    .split-content {
+      column-count: 1;
+      border-right: 1px solid;
+    }
+  }
+  @media(max-width: 767px) {
+    padding-top   : 130px;
+
+    padding-bottom: 80px;
+
+    .split-content {
+      border-right: 0;
+    }
+  }
+}
+
+.address-box {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @media(max-width: 767px) {
+    &:last-child {
+      margin-bottom : 40px;
+      padding-bottom: 30px;
+      border-bottom : 1px solid rgba(255,255,255,.21);
+    }
+  }
+}
+
+.contact-form {
+  .form-sent {
+    display: none;
+  }
+}

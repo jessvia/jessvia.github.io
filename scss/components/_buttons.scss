@@ -1,0 +1,114 @@
+.btn {
+  @extend %text-btn;
+  @extend %transition;
+  border-radius: 100px;
+  padding      : 7px 20px;
+  width        : fit-content;
+
+  &:hover {
+    background: $white;
+    color     : $orange;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.015),0 2px 20px 0 rgba(0,0,204,.015);
+    transform : translate(0,-5%);
+  }
+}
+
+.btn-wide {
+  padding: 5px 40px;
+}
+
+.btn-brown {
+  background: $brown;
+  color     : $white;
+}
+
+.btn-orange {
+  background: $orange;
+  color     : $white;
+}
+
+.btn-menu {
+  position           : absolute;
+  left               : 15px;
+  width              : 30px;
+  height             : 30px;
+  border             : 1px solid $white;
+  border-radius      : 100%;
+  display            : block;
+  background-image   : url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='12' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M.5.5h14-14zM.5 6h14-14zm0 5.5h14-14z' stroke='%23FFF' fill='none' fill-rule='evenodd' opacity='.8'/%3e%3c/svg%3e");
+  background-repeat  : no-repeat;
+  background-position: 50%;
+  background-size    : 14px;
+  @media(min-width: 991px) {
+    display: none;
+  }
+}
+
+.btn-close {
+  display            : block;
+  width              : 30px;
+  height             : 30px;
+  background-image   : url("../img/svg/x.svg");
+  background-repeat  : no-repeat;
+  background-position: 50%;
+  background-size    : 14px;
+}
+
+.btn-text {
+  @extend %text-btn;
+  display: block;
+  color  : $orange;
+  padding: 0;
+
+  &::after {
+    @extend %transition;
+    content    : url("../img/svg/arrow.svg");
+    display    : inline-block;
+    margin-left: 5px;
+  }
+
+  &::before {
+
+    @extend %transition;
+    content     : url("../img/svg/arrow.svg");
+    margin-right: 5px;
+    display     : none;
+    transform   : rotate(180deg);
+  }
+
+  &.btn-back {
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      display: inline-block;
+    }
+
+  }
+
+  &:hover {
+    background: transparent;
+
+    &::after {
+      transform: rotate(-45deg);
+
+    }
+
+    &::before {
+      transform: rotate(225deg);
+    }
+  }
+}
+
+.btn-load-more {
+  &::after {
+    content: 'load more';
+  }
+
+  &.active {
+    &::after {
+      content: 'show less';
+    }
+  }
+}

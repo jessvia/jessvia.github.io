@@ -1,0 +1,248 @@
+.card-wrap {
+  @media(max-width: 767px) {
+    margin-bottom: 40px;
+  }
+}
+
+.card-grid {
+  .card-wrap {
+    margin-bottom: 30px;
+  }
+}
+
+.box-card {
+  text-align   : left;
+  position     : relative;
+  min-height   : 85%;
+  background   : #FFFFFF;
+  color        : $gray-color;
+  border-radius: 5px;
+  padding      : 40px 0;
+
+  h4 {
+    color: $main-color;
+  }
+
+  &.fit-height {
+    min-height: 0;
+  }
+
+  &.height-100 {
+    min-height: 100px;
+  }
+
+  p+.btn {
+    margin-top: 35px;
+  }
+
+  .btn {
+    min-width: 160px;
+  }
+
+  .card-content {
+    max-width: 83.3%;
+    margin   : 0 auto;
+  }
+
+  .card-icon {
+    max-width    : 50px;
+    margin-bottom: 40px;
+  }
+
+  &.box-full-height {
+    min-height: 100%;
+  }
+
+  &.box-eq-height {
+    min-height: 90%;
+  }
+
+  &.icon-top {
+    padding-top: 55px;
+    margin-top : 36px;
+
+    .card-icon {
+      max-width    : 72px;
+      margin-bottom: 0;
+      position     : absolute;
+      top          : 0;
+      transform    : translate(0,-50%);
+    }
+  }
+
+  @media(max-width: 991px) {
+    padding: 45px 0 40px;
+
+    .card-icon {
+      margin-bottom: 20px;
+    }
+
+    &.icon-top {
+      padding: 45px 0 40px;
+
+      .card-icon {
+        max-width: 50px;
+      }
+    }
+  }
+  @media(max-width: 767px) {
+    padding: 35px 0 30px;
+
+    p + .btn {
+      margin-top: 20px;
+    }
+
+    .card-icon {
+      margin-bottom: 10px;
+    }
+
+    &.fit-height {
+      padding-bottom: 35px;
+    }
+
+    &.icon-top {
+      .card-icon {
+        max-width: 55px;
+      }
+    }
+  }
+}
+
+.slider-card {
+  font-family    : 'Value', 'Avenir Next', 'Century Gothic', sans-serif;
+  font-size      : 16px;
+  line-height    : 20px;
+  background     : #FFFFFF;
+  color          : $main-color;
+  border-radius  : 5px;
+  width          : 100%;
+  max-width      : 530px;
+  min-height     : 250px;
+  display        : inline-flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+  text-align     : center;
+  @media(max-width: 767px) {
+    min-height: 300px;
+  }
+}
+
+.card-press {
+  p {
+    max-width: 65%;
+    margin   : 0 auto;
+  }
+
+  figure {
+    width        : 100px;
+    height       : 80px;
+    margin-bottom: 20px;
+  }
+
+  .btn-text {
+    margin-top: 30px;
+  }
+
+  @media(max-width: 991px) {
+    p {
+      max-width: 85%;
+    }
+  }
+
+}
+
+.card-partner {
+  padding: 25px 40px;
+
+  p {
+    max-width: 85%;
+    margin   : 0 auto 20px;
+  }
+
+  img {
+    max-height   : 40px;
+    margin-bottom: 20px;
+  }
+}
+
+.card-user {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size  : 14px;
+  display    : flex;
+  align-items: center;
+  max-width  : 85%;
+
+  p {
+    max-width: none;
+    margin   : 0 auto;
+  }
+
+  img {
+    margin-right : 30px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    max-height   : none;
+    width        : 72px;
+    height       : 72px;
+    object-fit   : cover;
+  }
+  @media(max-width: 767px) {
+    flex-wrap      : wrap;
+    justify-content: center;
+
+    img {
+      width        : 40px;
+      height       : 40px;
+      margin-bottom: 10px;
+      margin-right : 0;
+    }
+
+    p {
+      margin-bottom: 8px;
+      flex-basis   : 100%;
+    }
+  }
+}
+
+.box-border {
+  border-right: 1px solid $dim-color;
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  @media(max-width: 767px) {
+    border-right: 0;
+
+    & + & {
+      margin-top: 50px;
+    }
+  }
+}
+
+.card-wide {
+  max-width : none;
+  max-height: none;
+}
+
+.card-article {
+  min-height    : 210px;
+  padding       : 30px;
+  display       : flex;
+  flex-direction: column;
+  margin-bottom : 30px;
+
+  h4 {
+    margin-bottom: 5px;
+  }
+
+  .btn-text {
+    margin-top: auto;
+  }
+}
+
+.box-shadow {
+  box-shadow: 0 30px 20px 0 rgba(218,218,204,0.21),0 5px 20px 0 rgba(218,218,204,.11);
+}
