@@ -1,0 +1,10 @@
+
+<svg width="14px" height="20px" viewBox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="play" transform="translate(-53.000000, 0.000000)" fill="#FE5900">
+            <g transform="translate(1.000000, 0.000000)" id="Triangle">
+                <polygon transform="translate(58.990601, 10.000000) rotate(-270.000000) translate(-58.990601, -10.000000) " points="58.9906012 3.53571429 68.5169167 16.4642853 49.4642857 16.4642853"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
