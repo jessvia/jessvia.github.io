@@ -1,20 +1,22 @@
 html {
   background-color: $off-white;
+  overflow: hidden;
 }
 
 body {
   // background: $white;
+  overflow: hidden;
 }
 
 body,
 html {
   @extend %font-smoothing;
-  font-family            : 'Roboto';
-  font-weight            : 300;
-  font-size              : 16px;
-  line-height            : 24px;
+  font-family            : 'Helvetica';
+  font-weight            : 400;
+  font-size              : 14px;
+  line-height            : 20px;
   letter-spacing         : 0;
-  color                  : $gray-color;
+  color                  : white;
   -webkit-font-smoothing : antialiased;
   -moz-osx-font-smoothing: grayscale;
   @media(max-width: 991px) {
@@ -27,4 +29,10 @@ main {
   @media (max-width: 991px) {
     overflow-x: hidden;
   }
+}
+
+
+button {
+  background-color: transparent;
+  border-color: transparent;
 }
