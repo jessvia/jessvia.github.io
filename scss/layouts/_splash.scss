@@ -81,6 +81,16 @@
 	}
 
 
+	#pause {
+		height: 100vh;
+		width: 100vw;
+		position: fixed;
+		cursor: pointer;
+		z-index: 111;
+		display: none;
+	}
+
+
 	&--video {
 		width: 100vw;
 		height: 100vh;
@@ -163,6 +173,7 @@
 				vertical-align: bottom;
 			}
 		}
+
 	}
 
 }

@@ -35,6 +35,7 @@
       </header>
 
       <section class="splash__section">
+        <div id="pause"></div>
         <div class="splash--video">
           <video id="video" height="100%" width="100%" allowfullscreen src="https://player.vimeo.com/external/312030462.hd.mp4?s=c9841e82964a4d7e315a97001fdac812133d5a96&profile_id=175" frameborder="0" loop playsinline></video>
         </div>
@@ -55,6 +56,7 @@
     
       var vid = document.getElementById("video");
       var pauseButton = document.querySelector("#play");
+      var pauseHTML = document.querySelector("#pause");
       var container = document.querySelector(".splash--video");
 
       if (window.matchMedia('(prefers-reduced-motion)').matches) {
@@ -62,21 +64,6 @@
           vid.pause();
           pauseButton.innerHTML = "Play";
       }
-
-      //   function videoPlay(){
-      //   $('.home-intro .intro-play').toggleClass('paused');
-      //   if(vid.paused) {
-      //     $('#video_intro')[0].play();
-      //   } else {
-      //     $('#video_intro')[0].pause();
-      //   }
-      // }
-
-      // videoPlay();
-
-      //   $(".home-intro .intro-play").click(function () {
-      //   videoPlay();
-      //   });
 
       function vidFade() {
         vid.classList.add("stopfade");
@@ -94,12 +81,25 @@
         vid.classList.toggle("stopfade");
         if (vid.paused) {
           vid.play();
+          $('.img-original').fadeOut();
+          $('#pause').show();
+        } else {
+          vid.pause();
+        } 
+      })
+
+      pauseHTML.addEventListener("click", function() {
+        vid.classList.toggle("stopfade");
+        if (vid.paused) {
+          vid.play();
           container.classList.add("active");
-          pauseButton.innerHTML = "Pause <img src='img/svg/pause.svg' />";
+          $('.img-original').fadeOut();
+          $('#pause').show();
         } else {
           vid.pause();
           container.classList.remove("active");
-          pauseButton.innerHTML = "Play <img src='img/svg/play.svg' />";
+          $('.img-original').fadeIn();
+          $('#pause').hide();
         } 
       })
 
