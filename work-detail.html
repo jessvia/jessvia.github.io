@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Matraka</title>
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="The ultimate Experience Creators">
+  </head>
+
+  <body>
+
+    <div class="loader-component"></div>
+
+    <header></header>
+
+    <main class="site-work">
+
+      <section class="section__work pt-100">
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="col-12 col-lg-4">
+              <div class="sticky row no-gutters">
+                <div class="col-12 breadcrumb">
+                  <a class="h2" href="/work.html"> Work </a>
+                  <a  class="h2" href="/work-detail.html"> American Express Release Party</a> 
+                </div>
+
+                <div class="col-md-6 col-lg-12 mt-20">
+                  <h3>American Express Release Party</h3>
+                </div>
+
+                <div class="col-md-5 offset-md-1 col-lg-12 offset-lg-0 section__work--detail">
+                  <h4>Datos del proyecto</h4>
+                  <ul class="list-unstyled list__caret">
+                    <li>Más de 90 vloggers e influencers</li>
+                    <li>Ad Equivalence 1.3 million</li>
+                    <li>Impacts 2.3 million</li>
+                    <li>+2k on site commitments</li>
+                  </ul>
+                </div>
+
+                <div class="col-md-5 offset-md-7 col-lg-12 offset-lg-0 section__work--share">
+                  <h4>Compartir en</h4>
+                  <ul class="list-unstyled socials">
+                    <li><a class="socials__tw" href="/"></a></li>
+                    <li><a class="socials__fb" href="/"></a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-8 section__work--photos">
+
+                <figure>
+                  <img src="img/matraka-1.jpg" alt="Matraka">
+                  <figcaption>Cena en el restaurante de Hotel Safi</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="img/img-hover.png" alt="Matraka">
+                    <figcaption>Whose merry ten yet beautiful</figcaption>
+                </figure>
+
+                <figure class="video">
+                  <span class="VideoPlayer-play paused"></span>
+                  <video width="100%" onclick="playPause();" src="https://player.vimeo.com/external/271145308.hd.mp4?s=60aad37db60e77d9f62ba2f634805f1f68c6d39a&profile_id=175"> 
+                    <source src="https://player.vimeo.com/external/271145308.hd.mp4?s=60aad37db60e77d9f62ba2f634805f1f68c6d39a&profile_id=175">
+                  </video>
+                  <figcaption>Concluded rapturous it intention perfectly daughters</figcaption>
+                </figure>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="section__related pt-65 py-80">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <h1>Proyectos <span class="underline">relacionados</span></h1>
+            </div>
+          </div>
+
+          <div class="row mt-65 mt-md-85">
+
+            <div class="col-md-4 work--item">
+                <a href="/">
+                <figure class="item-img">
+                    <img class="img--display" src="img/matraka-1.jpg" alt="Release Party">
+                    <img class="img--hover" src="img/img-hover.png" alt="Release">
+                  </figure>
+                <div class="item--content row">
+                  <div class="col-8"><p>American Express </p> <p>Lorem Release Party</p> </div>
+                  <div class="col-4 text-right">2018</div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 work--item">
+                <a href="/">
+                <figure class="item-img">
+                    <img class="img--display" src="img/matraka-1.jpg" alt="Release Party">
+                    <img class="img--hover" src="img/img-hover.png" alt="Release">
+                  </figure>
+                <div class="item--content row">
+                  <div class="col-8"><p>American Express </p> <p>Lorem Release Party</p> </div>
+                  <div class="col-4 text-right">2018</div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 work--item">
+                <a href="/">
+                <figure class="item-img">
+                    <img class="img--display" src="img/matraka-1.jpg" alt="Release Party">
+                    <img class="img--hover" src="img/img-hover.png" alt="Release">
+                  </figure>
+                <div class="item--content row">
+                  <div class="col-8"><p>American Express </p> <p>Lorem Release Party</p> </div>
+                  <div class="col-4 text-right">2018</div>
+                </div>
+                </a>
+            </div>
+          </div>
+
+          <div class="row mt-40">
+            <div class="col-12">
+              <a href="/work.html" class="link__arrow--right">Regresar a proyectos</a>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+      var video = document.getElementsByTagName('video')[0];
+
+      function playPause() {
+      if (video.paused)
+        video.play();
+      else
+        video.pause();
+        $('.VideoPlayer-play').toggleClass('paused');
+        $('.VideoPlayer-progress').toggleClass('paused');
+      }
+    </script>
+
+  </body>
+
+</html>

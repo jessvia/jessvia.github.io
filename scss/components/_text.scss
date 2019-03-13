@@ -1,158 +1,82 @@
 %h1,
 .h1,
 h1 {
-  font-family   : 'Value', 'Avenir Next', 'Century Gothic', sans-serif;
-  font-weight   : normal;
-  font-size     : 56px;
-  letter-spacing: -1px;
-  line-height   : 60px;
+  @include font($font-title, 500,normal, 92px, -4.4px, 100px);
+  color:white;
   @media(max-width: 991px) {
-    word-spacing: 1px;
-    font-size   : 40px;
-    line-height : 40px;
+    @include font($font-title, 500,normal, 60px, -2.87px, 62px);
+  }
+  @media(max-width: 767px) {
+    @include font($font-title, 500,normal, 28px, -0.93px, 31px);
   }
 }
 
 %h2,
 .h2,
 h2 {
-  font-family   : 'Value', 'Avenir Next', 'Century Gothic', sans-serif;
-  font-weight   : 500;
-  font-size     : 20px;
-  letter-spacing: -0.22px;
-  line-height   : 24px;
-  @media(max-width: 991px) {
-    font-size     : 18px;
-    letter-spacing: -0.18px;
-    line-height   : 20px;
-  }
-  @media(max-width: 767px) {
-    font-size     : 16px;
-    letter-spacing: -0.18px;
-    line-height   : 19px;
-  }
+  @include font($font-title, 500,normal, 15px, -0.3px, 20px);
 }
 
 %h3,
 .h3,
 h3 {
-  font-family   : 'Value', 'Avenir Next', 'Century Gothic', sans-serif;
-  font-weight   : normal;
-  font-size     : 20px;
-  letter-spacing: -0.22px;
-  line-height   : 24px;
+  @include font($font-title, 500,normal, 40px, -2px, 45px);
+  color:white;
+  @media(max-width: 992px) {
+    @include font($font-title, 500,normal, 35px, -1.75px, 40px);
+  }
   @media(max-width: 767px) {
-    font-size     : 16px;
-    letter-spacing: -0.18px;
-    line-height   : 20px;
+    @include font($font-title, 500,normal, 28px, -0.93px, 31px);
   }
 }
 
 %h4,
 .h4,
 h4 {
-  font-family   : 'Value', 'Avenir Next', 'Century Gothic', sans-serif;
-  font-weight   : 500;
-  font-size     : 16px;
-  letter-spacing: -0.18px;
-  line-height   : 20px;
+  @include font($font-title, 500,normal, 15px, -0.3px, 20px);
+  color:white;
   @media(max-width: 767px) {
-    letter-spacing: -0.09px;
+    @include font($font-title, 500,normal, 13px, -0.26px, 15px);
   }
-}
-
-%footer-title,
-.footer-title {
-  font-family   : 'Value', 'Avenir Next', 'Century Gothic', sans-serif;
-  font-weight   : 600;
-  font-size     : 18px;
-  letter-spacing: -0.2px;
-  line-height   : 24px;
-}
-
-%text-btn,
-.text-btn {
-  font-family   : 'Value', 'Avenir Next', 'Century Gothic', sans-serif;
-  font-size     : 16px;
-  letter-spacing: .24px;
-  line-height   : 20px;
 }
 
 %text-numeral,
 .text-numeral {
-  font-family   : 'Value', 'Avenir Next', 'Century Gothic', sans-serif;
-  font-size     : 80px;
-  letter-spacing: -2.82px;
-  line-height   : 100px;
-}
-
-%text-gradient {
-  background             : rgb(244,117,72);
-  background             : linear-gradient(135deg, rgba(244,117,72,1) 0%, rgba(235,76,67,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-%text-link,
-.text-link {
-  font-family   : 'Roboto';
-  font-weight   : 500;
-  font-size     : 16px;
-  letter-spacing: 0;
-  line-height   : 20rpx;
-}
-
-%text-sm,
-.text-sm {
-  font-family   : 'Roboto';
-  font-weight   : 300;
-  font-size     : 14px;
-  letter-spacing: .2px;
-  line-height   : 20px;
-}
-
-.text-quote {
-  font-family   : 'Value', 'Avenir Next', 'Century Gothic', sans-serif;
-  font-size     : 26px;
-  letter-spacing: -0.49px;
-  line-height   : 30px;
-}
-
-.color-orange {
-  color: $orange;
-}
-
-.read-more-container {
-  p:nth-child(n+3) {
-    @extend %transition;
-    position : absolute;
-    transform: translate(0,-5%);
-    opacity  : 0;
+  @include font($font-title, 500,normal, 132px, -7.7px, 98px);
+  color:white;
+  @media(max-width: 992px) {
+    @include font($font-title, 500,normal, 82px, -4.78px, 70px);
   }
+  @media(max-width: 767px) {
+    @include font($font-title, 500,normal, 60px, -3.5px, 60px);
+  }
+}
 
-  &.active {
-    p:nth-child(n+3) {
-      position : static;
-      transform: translate(0,0%);
-      opacity  : 1;
+
+.underline {
+  position: relative;
+
+  &::before {
+    content:'';
+    width: 50%;
+    left: 20%;
+    height: 20px;
+    background-color: $orange;
+    position: absolute;
+    bottom: 10px;
+
+    @media(max-width: 992px) {
+      height: 16px;
+      bottom:5px;
     }
-  }
-}
 
-.btn-read-more {
-  display: block;
-
-  &::after {
-    content: ' More';
-  }
-
-  &.active {
-    &::after {
-      content: ' Less';
+    @media(max-width: 767px) {
+      height: 8px;
+      bottom:3px;
+      width: 40%;
+      left: 30%;
     }
-  }
-}
 
-.red {
-  color: #EB4D44;
+  }
+  
 }

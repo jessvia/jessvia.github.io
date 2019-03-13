@@ -1,0 +1,83 @@
+.site-home .section {
+
+  &__hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  
+    #pause {
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      cursor: pointer;
+      z-index: 111;
+      display: none;
+    }
+
+    #play {
+      @include font($font-title, 500,normal, 25px, -0.5px, 20px);
+      color: $orange;
+      height: 40px;
+      padding-left: 0;
+      vertical-align:top;
+
+      img {
+        vertical-align: bottom;
+      }
+
+      @media(max-width: 767px) {
+        @include font($font-title, 500,normal, 15px, -0.3px, 20px);
+
+        img {
+          width: 10px;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .img-original {
+      position: absolute;
+      bottom:30px;
+      left:20px;
+      z-index: 23;
+      width: 80%;
+
+      h1 {
+        display: inline;
+      }
+
+    }
+  
+    &--video {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top:0;
+  
+      video {
+        @extend %transition;
+        object-fit: cover;
+        opacity:0;
+        z-index: -1;
+  
+        &.stopfade {
+          @extend %transition;
+          opacity:1;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  &__manifesto {
+    .text-number + .text-number {
+      margin-top: 100px;
+
+      @media(max-width: 767px) {
+        margin-top: 30px;
+      }
+    }
+  }
+
+}

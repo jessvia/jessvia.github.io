@@ -1,0 +1,37 @@
+.list {
+  &__caret {
+
+    & > li {
+      position: relative;
+      padding-left: 15px;
+    }
+
+    & > li::before {
+      content: '▶';
+      font-size: 10px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      color:$orange;
+    }
+  
+  }
+
+  @media (max-width: 767px) {
+    &__overflow {
+      white-space: nowrap;
+      overflow-x: scroll;
+
+      li {
+        display: inline;
+        margin-right: 15px;
+        color:#585858;
+
+        &.active {
+          color: white;
+        }
+      }
+    }
+
+  }
+}

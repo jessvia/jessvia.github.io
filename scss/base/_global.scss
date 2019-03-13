@@ -1,38 +1,34 @@
 html {
-  background-color: $off-white;
-  overflow: hidden;
+  background-color: $black;
 }
 
-body {
-  // background: $white;
-  overflow: hidden;
-}
 
 body,
 html {
   @extend %font-smoothing;
-  font-family            : 'Helvetica';
-  font-weight            : 400;
-  font-size              : 14px;
-  line-height            : 20px;
-  letter-spacing         : 0;
-  color                  : white;
+  @include font($font-body, 500,normal, 14px, 0px, 20px);
+  color                  : $main-color;
   -webkit-font-smoothing : antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @media(max-width: 991px) {
-    font-size  : 13px;
-    line-height: 20px;
-  }
+  background-color: $black;
 }
 
-main {
-  @media (max-width: 991px) {
-    overflow-x: hidden;
-  }
-}
+// main {
+//   @media (max-width: 991px) {
+//     overflow-x: hidden;
+//   }
+// }
 
 
 button {
   background-color: transparent;
   border-color: transparent;
+}
+
+.active, .color-white {
+  color:white;
+}
+
+figure img {
+  width: 100%;
 }

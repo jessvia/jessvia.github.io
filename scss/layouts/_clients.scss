@@ -1,0 +1,32 @@
+.site-clients .section{
+  
+    &__clients--item {
+    @extend %lt-gray;
+    padding-top: 90px;
+    padding-bottom: 70px;
+
+    img {
+      width: 165px;
+      object-fit: contain;
+      margin: 0 auto;
+      display: block;
+    }
+
+    &:hover {
+      background-color: white;
+
+      img {
+        filter: invert(100%);
+        -webkit-filter: invert(100%);
+      }
+    }
+  }
+
+  &__clients--link {
+    margin-top: -20px;
+
+    @media(max-width: 767px) {
+      margin-top: 15px;
+    }
+  }
+}

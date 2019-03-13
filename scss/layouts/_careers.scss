@@ -1,0 +1,115 @@
+.site-careers .section{
+
+  &__careers--item {
+    @extend %lt-gray;
+    padding-top: 40px;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 40px;
+      }
+    }
+
+    span {
+      vertical-align: top;
+    }
+
+    @include media-breakpoint-up(lg) {
+      &:hover::before{
+        margin-left: 15px;
+        margin-right: 15px;
+        content:'';
+        position: absolute;
+        top:40px;
+        right:0px;
+        height: 0px; 
+        width: 0px;
+        border: 15px solid;
+        border-top-width: 20px;
+        border-color: 
+          $orange
+          transparent
+          transparent;
+        transform: rotate(0deg);
+      }  
+
+      &.active::before{
+        transform: rotate(180deg);
+        margin-left: 15px;
+        margin-right: 15px;
+        content:'';
+        position: absolute;
+        top:32px;
+        right:0px;
+        height: 0px; 
+        width: 0px;
+        border: 15px solid;
+        border-top-width: 20px;
+        border-color: 
+          $orange
+          transparent
+          transparent;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      &::before {
+        margin-left: 15px;
+        margin-right: 15px;
+        content:'';
+        position: absolute;
+        top:40px;
+        right:20px;
+        height: 0px; 
+        width: 0px;
+        border: 8px solid;
+        border-top-width: 10px;
+        border-color: 
+          $orange
+          transparent
+          transparent;
+        transform: rotate(0deg);
+      }
+
+      &.active::before {
+        transform: rotate(180deg);
+        top:32px;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 30px;
+    }
+
+    .item__content {
+      .accordion {
+        cursor: pointer;
+        width:80%;
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin-top: 20px;
+      }
+    }
+
+    .item__content--hide {
+      max-height: 0;
+      overflow: hidden;
+      width:80%;
+
+      a {
+        margin-top: 20px;
+      }
+
+      &.active {
+        padding-top: 20px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+    }
+  }
+}

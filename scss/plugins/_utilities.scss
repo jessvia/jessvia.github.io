@@ -62,7 +62,8 @@ h4,
 h5,
 h6,
 p,
-span {
+span,
+ul, figure {
   margin-bottom: 0;
 }
 
@@ -83,6 +84,10 @@ a {
   }
 }
 
+iframe {
+  border-color: transparent;
+}
+
 
 ul {
   padding-left: 0;
@@ -98,7 +103,7 @@ ul {
   &::after {
     content   : ' ';
     display   : block;
-    background: $dim-color;
+    background: red;
     height    : 100%;
     width     : 1px;
   }
@@ -110,7 +115,7 @@ ul {
   column-span : all;
   column-fill : auto;
 
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     column-count: 1;
 
     &.is-open {

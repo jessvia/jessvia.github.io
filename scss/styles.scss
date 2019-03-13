@@ -3,32 +3,38 @@
 @import 'bootstrap/bootstrap';
 
 // Libraries
-// @import 'https://unpkg.com/aos@latest/dist/aos.css';
-// @import 'https://use.fontawesome.com/releases/v5.4.1/css/all.css';
-// @import 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.css';
-// @import 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.css';
+@import 'https://unpkg.com/aos@latest/dist/aos.css';
+
 
 //General
 @import 'base/variables';
 @import 'base/global';
+@import 'base/spacing';
 
 // Base Components
-// @import "components/text";
-// @import "components/loader";
-// @import "components/header";
-// @import "components/footer";
-// @import "components/sections";
-// @import "components/titles";
-// @import "components/buttons";
-// @import "components/cards";
+@import "components/text";
+@import "components/loader";
+@import "components/header";
+@import "components/footer";
+@import "components/sections";
+@import "components/titles";
+@import "components/buttons";
+@import "components/list";
 // @import "components/slider";
-// @import "components/modal";
-// @import "components/menu";
-// @import "components/inputs";
+@import "components/modal";
+@import "components/menu";
+@import "components/inputs";
+@import "components/select";
 
 // Layouts
 @import "layouts/error";
 @import "layouts/splash";
+@import "layouts/home";
+@import "layouts/clients";
+@import "layouts/team";
+@import "layouts/careers";
+@import "layouts/work";
+@import "layouts/press";
 
 
 // Plugins

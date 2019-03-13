@@ -7,3 +7,24 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica') format('dfont');
+    font-weight: 400;
+    font-style: normal;
+}
+
+// Typography Options
+$font-title: 'NHaasGroteskTXPro-75Bd', sans-serif;
+$font-body: 'Helvetica', Helvetica, sans-serif;
+
+
+//TYPOGRAPHY 
+@mixin font($font:$font-title, $weight:normal, $style: normal, $size:16px, $spacing:-0.08px, $line-height:20px) {
+    font-family: $font;
+    font-weight: $weight;
+    font-style : $style;
+    font-size: $size;
+    letter-spacing: $spacing;
+    line-height: $line-height;
+}
