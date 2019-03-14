@@ -1,7 +1,7 @@
 input,
 textarea {
   border-color: transparent;
-  border-bottom       : 1px solid #474747;
+  border-bottom       : 1px solid $dark-gray;
   background   : transparent;
   width        : 100%;
   border-radius: 2px;
@@ -42,7 +42,6 @@ label {
   }
 }
 
-
 .accordion__content {
   ul li{
     display: flex;
@@ -51,6 +50,7 @@ label {
   label {
     @include font($font-body, 500,normal, 14px, 0px, 20px);
     color:#B3B3B3;
+    cursor: pointer;
   }
 
   input {

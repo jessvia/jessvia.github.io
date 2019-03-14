@@ -2,7 +2,6 @@ html {
   background-color: $black;
 }
 
-
 body,
 html {
   @extend %font-smoothing;
@@ -10,15 +9,12 @@ html {
   color                  : $main-color;
   -webkit-font-smoothing : antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $black;
+  
 }
 
-// main {
-//   @media (max-width: 991px) {
-//     overflow-x: hidden;
-//   }
-// }
-
+body {
+  background-color: $black;
+}
 
 button {
   background-color: transparent;

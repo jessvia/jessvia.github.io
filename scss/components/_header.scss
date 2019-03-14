@@ -9,7 +9,7 @@ header {
   align-items    : center;
   justify-content: space-between;
   background     : $black;
-  padding        : 20px 20px;
+  padding        : 20px;
   z-index        : 1010;
 
   .header {
@@ -45,6 +45,8 @@ header {
   }
 
   @media (max-width: 991px) {
+    padding: 15px;
+
     .selectric-wrapper {
       display: none;
     }

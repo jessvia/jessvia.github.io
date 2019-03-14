@@ -1,15 +1,21 @@
 @font-face {
     font-family: 'NHaasGroteskTXPro-75Bd';
-    src: url('../fonts/NHaasGroteskTXPro-75Bd.woff2') format('woff2'),
-        url('../fonts/NHaasGroteskTXPro-75Bd.woff') format('woff'),
-        url('../fonts/NHaasGroteskTXPro-75Bd.svg#NHaasGroteskTXPro-75Bd') format('svg');
+    src: url('../fonts/38B283_1_0.eot'); 
+    src: url('../fonts/38B283_1_0.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/38B283_1_0.woff2') format('woff2'), 
+        url('../fonts/38B283_1_0.woff') format('woff'), 
+        url('../fonts/38B283_1_0.ttf')  format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Helvetica';
-    src: url('../fonts/Helvetica') format('dfont');
+    src: url('../fonts/38B283_0_0.eot'); 
+    src: url('../fonts/38B283_0_0.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/38B283_0_0.woff2') format('woff2'), 
+        url('../fonts/38B283_0_0.woff') format('woff'), 
+        url('../fonts/38B283_0_0.ttf')  format('truetype');
     font-weight: 400;
     font-style: normal;
 }

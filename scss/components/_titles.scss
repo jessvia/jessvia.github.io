@@ -6,6 +6,12 @@ h4 + ul, h4 + p, h4 + address {
   }
 }
 
+.sticky{
+  h2 + .matraka-icon {
+    margin-top: 60px;
+  }
+}
+
 p + a {
   margin-top: 20px;
 }

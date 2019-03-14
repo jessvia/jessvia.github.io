@@ -62,20 +62,36 @@ for (i = 0; i < acc.length; i++) acc[i].addEventListener("click", function() {
 });
 
 
-// FILTROS TEXTO
-$('body').on('click touchstart', '.section__work .accordion#filter', function() {
+// FILTRO
+$('body').on('click', '.section__work .accordion__filter', function() {
 
     if ($(window).width() >= 767) {
-        if($('span', this).text() == 'Cerrar filtros'){
-            $('span', this).text('Filtros');
+
+        var t = this.nextElementSibling;
+        $(this).toggleClass('active');
+        $(t).toggleClass('active');
+
+        if($('span', '#filter').text() == 'Cerrar filtros'){
+            $('span', '#filter').text('Filtros');
         } else {
-            $('span', this).text('Cerrar filtros');
+            $('span', '#filter').text('Cerrar filtros');
         }
         
     } else {
         $("#modal-filter").addClass("is-open");
+
+        $('body').on('click', '.accordion__filter', function() {
+            var t = this.nextElementSibling;
+            $(this).toggleClass('active');
+            $(t).toggleClass('active');
+        });
+
     }
 });
+
+$('body').on('click touchstart', '.btn-close', function() {
+    $(this).parent().removeClass('is-open');
+  });
 
 
     //PRIVACIDAD

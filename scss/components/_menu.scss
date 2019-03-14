@@ -7,7 +7,6 @@ $menu-icon-dash-gutter:        $menu-icon-dash-height * 5;
   display: block;
   position: absolute;
   top: 50%;
-  left: (1em - $menu-icon-dash-width) / 2;
   background-color: white;
   width: 21px;
   height: 1px;
@@ -61,11 +60,13 @@ $menu-icon-dash-gutter:        $menu-icon-dash-height * 5;
     span{
       background-color: rgba(white, 0);
       transition-delay: 0s;
+      right:0;
     }
 
     &:before, &:after{
         margin-top: 0;
-        transition-delay: 0s, 0.25s, 0.25s;
+        transition-delay: 0s, 0.4s, 0.4s;
+        right:0;
     }
 
     &:before{
@@ -83,7 +84,6 @@ $menu-icon-dash-gutter:        $menu-icon-dash-height * 5;
 }
 
 .mobile__nav {
-  @extend %transition;
   opacity: 0;
   z-index       : -99999;
   pointer-events: none;
@@ -107,7 +107,7 @@ $menu-icon-dash-gutter:        $menu-icon-dash-height * 5;
       position: relative;
   
       &:not(:last-child) {
-        border-bottom:1px solid #474747;
+        border-bottom:1px solid $dark-gray;
       }
   
       a {
@@ -116,9 +116,13 @@ $menu-icon-dash-gutter:        $menu-icon-dash-height * 5;
       }
     }
   }
+
+  .position-absolute {
+    bottom:30px;
+  }
   
   &.open {
-    @extend %transition;
+    transition: left 200ms $bezier, opacity 400ms $bezier;
     opacity       : 1;
     left:0;
     z-index       : 99999;
@@ -126,8 +130,8 @@ $menu-icon-dash-gutter:        $menu-icon-dash-height * 5;
 
     .menu-icon {
       margin-top: 20px;
-      float: right;
       margin-right: 0;
+      width:100%;
     }
 
     li.nav-item {
