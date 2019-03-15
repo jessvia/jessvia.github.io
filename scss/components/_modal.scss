@@ -18,7 +18,7 @@
     position: absolute;
     top     : 0;
     right   : 0;
-    margin  : 20px;
+    margin  : 20px 15px 20px 20px;
     z-index : 10;
     height: 20px;
     width: 20px;
@@ -72,17 +72,16 @@
   }
 }
 
-.modal[aria-hidden="false"] .modal-overlay {
-  animation: mmfadeIn .8s cubic-bezier(0.0, 0.0, 0.2, 1);
+.mobile__filter.is-open {
+  animation: mmfadeIn .4s cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
 
-.modal[aria-hidden="true"] .modal-overlay {
-  animation: mmfadeOut .8s cubic-bezier(0.0, 0.0, 0.2, 1);
+.mobile__filter {
+  animation: mmfadeOut .4s cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
-.modal .modal-content,
-.modal .modal-overlay {
+.mobile__filter.is-open {
   will-change: transform;
 }
 
@@ -106,22 +105,3 @@
   }
 }
 
-@keyframes mmslideIn {
-  from {
-    transform: translateY(15%);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes mmslideOut {
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(-10%);
-  }
-}

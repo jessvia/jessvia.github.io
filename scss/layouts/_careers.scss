@@ -4,6 +4,16 @@
     @extend %lt-gray;
     padding-top: 40px;
 
+    &.active {
+      .item__content--hide {
+        transition:opacity 400ms $bezier;
+        max-height: 100%;
+        overflow: auto;
+        opacity: 1;
+        padding-top: 20px;
+      }
+    }
+
     &:not(:last-child) {
       margin-bottom: 50px;
 
@@ -98,13 +108,10 @@
       max-height: 0;
       overflow: hidden;
       width:80%;
+      opacity: 0;
 
       a {
         margin-top: 20px;
-      }
-
-      &.active {
-        padding-top: 20px;
       }
 
       @include media-breakpoint-down(sm) {

@@ -12,6 +12,7 @@ textarea {
 
 input:focus, textarea:focus {
   box-shadow: none;
+  border-color: transparent;
   border-bottom-color: white;
   outline: none;
 }
@@ -64,3 +65,16 @@ label {
     color:white;
   }
 } 
+
+
+@-webkit-keyframes autofill {
+  to {
+      color: white;
+      background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  animation-name: autofill;
+  animation-fill-mode: both;
+}
