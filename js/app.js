@@ -29,6 +29,13 @@ $(window).on('load', function() {
   });
 });
 
+// AGREGAR EFECTOS DE ON SCROLL
+$(window).on('load', function() {
+  $('.element').attr('data-aos', 'fade-up');
+  $('.element').attr('data-aos-duration', '2000');
+  AOS.init();
+});
+
 // LOAD HTML
 $(document).ready(function() {
   $("header").load("_header.html");
@@ -51,16 +58,10 @@ $('body').on('click touchstart', '.mobile__nav li a', function() {
   $(this).toggleClass('active').parent().toggleClass('active');
 });
 
-// ACCORDION
-var i, acc = document.getElementsByClassName("accordion");
-for (i = 0; i < acc.length; i++) acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var t = this.nextElementSibling;
-    $(t).toggleClass('active');
-    $(this).closest('.section__careers--item').toggleClass('active');
-    t.style.maxHeight ? t.style.maxHeight = null : t.style.maxHeight = t.scrollHeight + "px"
+// CAREERS 
+$('body').on('click', '.section__careers--item', function() {
+  $(this).toggleClass('active');
 });
-
 
 // FILTRO
 $('body').on('click', '.section__work .accordion__filter', function() {
@@ -80,7 +81,7 @@ $('body').on('click', '.section__work .accordion__filter', function() {
     } else {
         $("#modal-filter").addClass("is-open");
 
-        $('body').on('click', '.accordion__filter', function() {
+        $('body').on('click', '.mobile__filter .accordion__filter', function() {
             var t = this.nextElementSibling;
             $(this).toggleClass('active');
             $(t).toggleClass('active');
