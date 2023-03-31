@@ -59,9 +59,14 @@ canvas {
 }
 
 .rotate-img {
-  transform: rotate(90deg);
-  transform-origin: center;
-  margin-top: 200px;
+  margin-bottom: 50px;
+
+  @media(min-width: 767px) {
+    transform: rotate(90deg);
+    transform-origin: center;
+    margin-top: 200px;
+  }
+ 
 }
 
 
@@ -96,6 +101,11 @@ canvas {
 
 .mt--50 {
   margin-top: -50px;
+
+  @include media-breakpoint-down(lg){
+   margin-top: -10px;
+   width: 70%;
+  }
 }
 
 @include header-variant('black', $night);
