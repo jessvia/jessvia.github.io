@@ -1,0 +1,48 @@
+.icon-close {
+    width: 16px;
+    height: 16px;
+    @include stroke-color($white);
+  }
+  
+  
+  .go-next {
+    background: $night;
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    bottom: 3rem;
+    right: 5rem;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    overflow: hidden;
+  
+    svg {
+      display: none;
+      height: 1.1rem;
+      width: 1.4rem;
+      margin-bottom: -.3rem;
+      stroke: #fff;
+    }
+  
+    &::after {
+      
+        width: 10px;
+        height: 10px;
+        margin-left: 0;
+        margin-top: -5px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-animation: scroll 2s ease-in-out infinite;
+        animation: scroll 2s ease-in-out infinite;
+        content: "";
+        display: inline-block;
+        border-right: 1px solid;
+        border-bottom: 1px solid;
+        color: #fff;
+    }
+  }

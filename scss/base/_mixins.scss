@@ -1,0 +1,33 @@
+@mixin header-variant($header-name, $color-primary){
+    .header-#{$header-name}{
+      color: $color-primary;
+      svg{ 
+        fill: $color-primary; 
+        stroke: $color-primary;
+      }
+      .mobile-btn .nav-btn{
+        &, &::before, &::after{
+          background-color: $color-primary;
+        }
+      }
+    }
+  }
+  @mixin stroke-color($color){
+    stroke: $color;
+  }
+  @mixin fill-color($color){
+    fill: $color;
+  }
+
+
+  @mixin br-variant($parent, $color) {
+    #{$parent} {
+      border-color: $color !important;
+    }
+    // a#{$parent},
+    // button#{$parent} {
+    //   @include hover-focus {
+    //     background-color: darken($color, 10%) !important;
+    //   }
+    // }
+  }

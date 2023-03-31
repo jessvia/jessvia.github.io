@@ -1,9 +1,8 @@
-
 $custom_spacer: 5px !default;
 $custom_spacers: ()
 !default;
 
-@for $i from 1 through 24 {
+@for $i from 1 through 60 {
   $custom_spacers: map-merge((($i * 5): ($custom_spacer * $i)), $custom_spacers);
 }
 

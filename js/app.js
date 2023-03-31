@@ -1,3 +1,234 @@
+/* --- Function Index --- */
+// var site = {
+//   // 1st function to fire
+//   ready: ready,
+//   // 2nd function to fire
+//   load: load,
+//   scroll: scroll,
+//   resize: resize,
+//   /* this is function to set functionalities depending on the link rute */
+//   routeSwitch: routeSwitch,
+//   responsive: function getResponsive() {
+//     var windowWidth = window.innerWidth;
+//     var size;
+//     if (windowWidth > 768) {
+//       size = "lg"
+//     }
+//     else if (windowWidth <= 768 && windowWidth > 426) {
+//       size = "md"
+//     }
+//     else if (windowWidth <= 426) {
+//       size = "sm"
+//     }
+
+//     return size
+//   },
+//   closeAllOpenModals: closeAllOpenModals,
+//   header: {
+//     init: function init() {
+//       var waitExist = setInterval(function () {
+//         if ($('#burger-menu').length) {
+//           clearInterval(waitExist);
+
+//           $('#burger-menu').click(function () {
+//             site.header.open(this)
+//           })
+//         }
+//       }, 100);
+//     },
+//     open: toggleMobileMenu,
+//     close: closeMobileMenu
+//   }
+// }
+
+// function ready() {
+//   // Load Partials
+//   $("header").load("./partials/_header.html");
+//   $("footer").load("./partials/_footer.html");
+
+//   // Load Modals
+//   $("#modal-01").load("./modals/_modal.html");
+
+//   scroll();
+// }
+
+// $(document).ready(function () {
+//   site.ready();
+// });
+
+// function load() {
+//   site.header.init()
+//   site.routeSwitch();
+
+//   $('.loader-image').fadeOut(350);
+//   $('.loader-component').delay(600).fadeOut('slow');
+//   $('main').css({
+//     opacity: 1
+//   });
+// }
+
+// $(window).on('load', function () {
+//   site.load();
+// });
+
+// function resize() {
+//   var r = site.responsive()
+
+//   site.closeAllOpenModals()
+// }
+
+// $(window).on('resize', function () {
+//   site.resize();
+// });
+
+// function scroll() {
+//   if ($(window).scrollTop() > 50) {
+//     $("header").addClass("active-background");
+//     $(".mobile-nav-header").addClass("active-background");
+//   } else {
+//     //remove the background property so it comes transparent again (defined in your css)
+//     $("header").removeClass("active-background");
+//     $(".mobile-nav-header").removeClass("active-background");
+//   }
+// }
+
+// $(window).on("scroll", function () {
+//   site.scroll();
+// });
+
+// VALIDATE FORMS
+// (function () {
+//   'use strict';
+//   window.addEventListener('load', function () {
+//     // Fetch all the forms we want to apply custom Bootstrap validation styles to
+//     var forms = document.getElementsByClassName('needs-validation');
+//     // Loop over them and prevent submission
+//     var validation = Array.prototype.filter.call(forms, function (form) {
+//       form.addEventListener('submit', function (event) {
+//         if (form.checkValidity() === false) {
+//           event.preventDefault();
+//           event.stopPropagation();
+//         }
+//         form.classList.add('was-validated');
+//       }, false);
+//     });
+//   }, false);
+// })();
+
+// function routeSwitch() {
+//   var location = document.location.pathname;
+//   var nav, contactLink;
+
+//   if (this.winWidth > 769) {
+//     nav = $("header .nav-grid")
+//     contactLink = $("header .contact-link")
+//   }
+//   else {
+//     nav = $(".mobile-menu .mobile-nav")
+//     contactLink = $(".mobile-nav-header .contact-link")
+//   }
+
+//   switch (location) {
+
+//     case "/":
+//     case "/home":
+//       /* set all the functionality for the specific rute */
+
+//       // $("header").addClass("dark");
+//       // $(".mobile-nav-header").addClass("dark");
+//       break;
+
+//     default:
+//       break;
+//   }
+
+  /* this timeOut allows to set an animation in the header if needed */
+  // setTimeout(function () {
+  // }, 900);
+// }
+
+// function toggleMobileMenu(el) {
+//   var el = $(el) // $(el) ----> #burger-menu
+//   if ($("#burger-menu").hasClass("animating")) return;
+
+//   if (site.responsive() == "sm") {
+//     //close
+//     if ($(".js-menu").hasClass("js-menu--opened")) {
+//       site.header.close()
+//     }
+//     //open
+//     else {
+//       $(".js-menu").show()
+//       el.addClass("open animating")
+//       TweenMax.to($(".js-pushright"), .6, {
+//         x: window.innerWidth,
+//         ease: Power3.easeInOut
+//       })
+//       TweenMax.fromTo($(".js-menu"), .6, {
+//         x: -window.innerWidth
+//       }, {
+//         x: 0,
+//         ease: Power3.easeInOut,
+//         onComplete: function () {
+//           $(".js-menu").addClass("js-menu--opened open")
+//           el.removeClass("animating");
+//         }
+//       })
+//     }
+//   }
+//   else if (site.responsive() == "md") {
+//     //close
+//     if ($(".js-menu").hasClass("js-menu--opened")) {
+//       site.header.close()
+//     }
+//     //open
+//     else {
+//       $(".js-menu").show()
+//       var menuWidth = $(".js-menu").width();
+//       el.addClass("open animating")
+//       TweenMax.fromTo($(".js-menu"), .6, {
+//         x: -menuWidth
+//       }, {
+//         x: 0,
+//         ease: Power3.easeInOut,
+//         onComplete: function () {
+//           $(".js-menu").addClass("js-menu--opened open")
+//           el.removeClass("animating");
+//         }
+//       })
+//     }
+//   }
+// }
+
+// function closeMobileMenu() {
+//   //close
+//   if ($(".js-menu").hasClass("js-menu--opened")) {
+//     $("#burger-menu").addClass("animating")
+//     TweenMax.to($(".js-pushright"), .5, {
+//       x: 0,
+//       ease: Power3.easeInOut,
+//       clearProps: "transform,z-index"
+//     })
+//     TweenMax.to($(".js-menu"), .5, {
+//       x: -window.innerWidth,
+//       ease: Expo.easeInOut,
+//       onComplete: function () {
+//         $(".js-menu").removeClass("js-menu--opened open").hide()
+//         $("#burger-menu").removeClass("open animating");
+//         TweenMax.to($(".js-menu-item"), .5, {
+//           opacity: 1,
+//           ease: Expo.easeOut
+//         })
+//       }
+//     })
+//   }
+// }
+
+// function closeAllOpenModals() {
+//   site.header.close()
+// }
+
+
 // LOAD SCRIPTS
 $(document).ready(function() {
   function loadScript(scripts, callback) {
@@ -9,24 +240,23 @@ $(document).ready(function() {
     });
   }
 
-  // SELECTTRIC
-  loadScript(["js/jquery.selectric.js"], function() {
-    $(function() {
-      $('select').selectric({
-        maxHeight: 200
-      });
-    });
-  });
-
 });
 
 
 $(window).on('load', function() {
   $('.loader-image').fadeOut(1500);
-  $('.loader-component').delay(1500).fadeOut('slow');
+  $('.loader-component').delay(400).slideUp('slow');
   $('main').css({
     opacity: 1
   });
+  // $('.link__socials').each(function (index) {
+  //   var characters = $(this).text().split("");
+  //   $this = $(this);
+  //   $this.empty();
+  //   $.each(characters, function (i, el) {
+  //   $this.append("<span>" + el + "</span");
+  //   });
+  // });
 });
 
 // AGREGAR EFECTOS DE ON SCROLL
@@ -36,203 +266,70 @@ $(window).on('load', function() {
   AOS.init();
 });
 
-// LOAD HTML
-$(document).ready(function() {
-  $("header").load("_header.html");
-	$("footer").load("_footer.html");
-	
-    $("<div id='modal-menu' class='mobile__nav'></div>").prependTo("body");
-    $("<div id='modal-filter' class='mobile__filter'></div>").prependTo("body");
-    $("#modal-menu").load("_menu.html");
-    $("#modal-filter").load("_filter.html");
+// $('body').on('click', 'h1 span', function() {
+//   var t = this.nextElementSibling;
+//   $(this).toggleClass('active');
+//   $(t).toggleClass('active');
+// });
+
+
+
+// let mousemove = document.querySelector('.variable-font--mousemove');
+
+// // let scroll = document.querySelector('.variable-font--scroll');
+
+// let video = document.querySelector('.variable-font--scale-video');
+
+// mousemove.addEventListener('mousemove', function(e) {
+//   let windowWidth =  window.innerHeight;
+//   let clientY = e.clientY * 2;
+//   let fontWeight = clientY;
+//   let clientX = (window.innerWidth / 10 - e.clientX / 10) / 5;
+//   let fontSlant = clientX;
+//   if (fontWeight > 900) fontWeight = 900;
+//   if (fontWeight < 200) fontWeight = 200;
+  
+//   mousemove.style.setProperty('--font-weight', `${ fontWeight }`);
+//   mousemove.style.setProperty('--font-slant', `-${ clientX }`);
+// });
+
+// window.addEventListener('scroll', function(e) {
+//   let windowY = window.scrollY  * 2;
+//   if (windowY > 1000) windowY = 900;
+//   if (windowY <= 100) windowY = 200;
+  
+//   scroll.style.setProperty('--font-weight', `${ windowY }`);
+//   scroll.style.setProperty('--opacity', `${ windowY / 1000 }`);
+// });
+
+
+
+
+//DONT GO
+! function(t, e) {
+  "object" == typeof exports && "undefined" != typeof module ? module.exports = e() : "function" == typeof define && define.amd ? define(e) : t.dontGo = e()
+}(this, function() {
+  return function(t) {
+    void 0 === t && (t = {});
+    var e, i, n, o, c = Object.assign({
+        title: "Don't go!",
+        faviconSrc: "",
+        timeout: 0,
+        interval: 1e3
+      }, t),
+      l = document.title,
+      r = 0;
+    document.querySelectorAll('link[rel="icon"]').length && (e = document.querySelector('link[rel="icon"]'), i = e.getAttribute("href")), c.faviconSrc.length && ((new Image).src = c.faviconSrc);
+    var u = function() {
+        "string" == typeof c.title ? document.title = c.title : (document.title = c.title[0], o = setInterval(d, c.interval)), c.faviconSrc.length && e.setAttribute("href", c.faviconSrc)
+      },
+      d = function() {
+        ++r >= c.title.length && (r = 0), document.title = c.title[r]
+      };
+    document.addEventListener("visibilitychange", function() {
+      "hidden" === document.visibilityState ? c.timeout > 0 ? n = setTimeout(u, c.timeout) : u() : (document.title = l, clearTimeout(n), clearInterval(o))
+    })
+  }
 });
 
-// MENU HAM
-$('body').on('click', '.menu-icon', function() {
-  $('.menu-icon').toggleClass('active');
-  $('#modal-menu').toggleClass('open');
-});
 
-// MENU MOBILE CONTENT
-$('body').on('click touchstart', '.mobile__nav li a', function() {
-  $(this).toggleClass('active').parent().toggleClass('active');
-});
-
-// CAREERS 
-$('body').on('click', '.section__careers--item', function() {
-  $(this).toggleClass('active');
-});
-
-// FILTRO
-$('body').on('click', '.section__work .accordion__filter', function() {
-
-    if ($(window).width() >= 767) {
-
-        var t = this.nextElementSibling;
-        $(this).toggleClass('active');
-        $(t).toggleClass('active');
-
-        if($('span', '#filter').text() == 'Cerrar filtros'){
-            $('span', '#filter').text('Filtros');
-        } else {
-            $('span', '#filter').text('Cerrar filtros');
-        }
-        
-    } else {
-        $("#modal-filter").addClass("is-open");
-
-        $('body').on('click', '.mobile__filter .accordion__filter', function() {
-            var t = this.nextElementSibling;
-            $(this).toggleClass('active');
-            $(t).toggleClass('active');
-        });
-
-    }
-});
-
-$('body').on('click touchstart', '.btn-close', function() {
-    $(this).parent().removeClass('is-open');
-  });
-
-
-    //PRIVACIDAD
-$(".site-press li").click(function() {
-    var buttonId = Number($(this).attr("id"));
-    $('.site-press li').removeClass("active");
-    $(this).addClass("active");
-    $(".section__press--content").hide();
-    $(".section__press--content[data-id="+buttonId+"]").fadeIn(); 
-});
-
-
-// INPUTSS
-$(document).ready(function() {
-	// Test for placeholder support
-    $.support.placeholder = (function(){
-        var i = document.createElement('input');
-        return 'placeholder' in i;
-    })();
-
-    // Hide labels by default if placeholders are supported
-    if($.support.placeholder) {
-        $('.form-label').each(function(){
-            $(this).addClass('js-hide-label');
-        });  
-
-        // Code for adding/removing classes here
-        $('.form-group').find('input, textarea').on('keyup blur focus', function(e){
-            
-            // Cache our selectors
-            var $this = $(this),
-                $parent = $this.parent().find("label");
-                $error = $this.parent().find(".input-error");
-					
-						switch(e.type) {
-							case 'keyup': {
-                $parent.toggleClass('js-hide-label', $this.val() == '');
-                $error.toggleClass('active', $this.val() == '');
-							} break;
-							case 'blur': {
-								if( $this.val() == '' ) {
-                    $parent.addClass('js-hide-label');
-                  
-                } else {
-                    $parent.removeClass('js-hide-label').addClass('js-unhighlight-label');
-                    
-                }
-							} break;
-							case 'focus': {
-								if( $this.val() !== '' ) {
-                    $parent.removeClass('js-unhighlight-label');
-                }
-						    } break;
-						    default: break;
-						}
-        });
-    } 
-});
-
-// VIDEO HERO 
-var vid = document.getElementById("video");
-var pauseButton = document.querySelector("#play");
-var pauseHTML = document.querySelector("#pause");
-
-if (window.matchMedia('(prefers-reduced-motion)').matches) {
-    vid.removeAttribute("autoplay");
-    vid.pause();
-    pauseButton.innerHTML = "Play";
-}
-
-function vidFade() {
-    vid.classList.add("stopfade");
-}
-
-vid.addEventListener('ended', function()
-{
-// only functional if "loop" is removed 
-vid.pause();
-// to capture IE10
-vidFade();
-}); 
-
-$(window).scroll(function() {
-var winTop = $(this).scrollTop();
-var vid = document.getElementById("video");
-
-    if(winTop >= $('.section__hero').height()-$('header').height()){
-
-        vid.pause();
-        vid.classList.remove("stopfade");
-        $('.img-original').fadeIn();
-        $('#pause').hide();
-        
-        // if(vid.paused) {
-        //     $('#video')[0].pause();
-        //     vid.classList.remove("stopfade");
-        //     $('.img-original').fadeIn();
-        //     $('#pause').hide();
-        // } else {
-        //     $('#video')[0].pause();
-        //     vid.classList.remove("stopfade");
-        //     $('.img-original').fadeIn();
-        //     $('#pause').hide();
-        // }
-
-    }else {
-        vid.pause();
-        vid.classList.remove("stopfade");
-        $('.img-original').fadeIn();
-        $('#pause').hide();
-
-        // if(vid.paused) {
-        //     $('#video')[0].pause();
-        //     vid.classList.remove("stopfade");
-        //     $('.img-original').fadeIn();
-        //     $('#pause').hide();
-        // } else {
-        //     $('#video')[0].pause();
-        //     vid.classList.remove("stopfade");
-        //     $('.img-original').fadeIn();
-        //     $('#pause').hide();
-        // }
-    }
-});
-
-pauseButton.addEventListener("click", function() {
-if (vid.paused) {
-    vid.play();
-    vid.classList.add("stopfade");
-    $('.img-original').fadeOut();
-    $('#pause').show();
-} else {
-    vid.pause();
-    vid.classList.remove("stopfade");
-} 
-})
-
-pauseHTML.addEventListener("click", function() {
-    vid.classList.toggle("stopfade");
-    vid.pause();
-    $('.img-original').fadeIn();
-    $('#pause').hide();
-})

@@ -1,52 +1,58 @@
-var gulp = require('gulp'),
-    plumber = require('gulp-plumber'),
-    rename = require('gulp-rename');
-var autoprefixer = require('gulp-autoprefixer');
-var imagemin = require('gulp-imagemin'),
-    cache = require('gulp-cache');
-var minifycss = require('gulp-minify-css');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync');
+var gulp = require("gulp");
+    sass = require("gulp-sass")(require('sass'));
+    sass = require("gulp-sass")(require('sass')),
+    postcss = require("gulp-postcss"),
+    autoprefixer = require("autoprefixer"),
+    sourcemaps = require("gulp-sourcemaps");
+    browserSync = require("browser-sync").create();
 
-gulp.task('browser-sync', function() {
-  browserSync.init(['css/**/*.css', 'js/**/*.js', 'index.html'], {
-    server: {
-      baseDir: './'
-    },
-    ghostMode: {
-         scroll: true
-       }
-  });
-});
+// Define tasks after requiring dependencies
 
-gulp.task('bs-reload', function () {
-  browserSync.reload();
-});
+var paths = {
+  styles: {
+    // By using styles/**/*.scss we're telling gulp to check all folders for any sass file
+    src: "scss/**/*.scss",
+    // Compiled files will end up in whichever folder it's found in (partials are not compiled)
+    dest: "css"
+  }
 
-gulp.task('images', function(){
-  gulp.src('assets/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('img/'));
-});
 
-gulp.task('styles', function(){
-  gulp.src(['scss/**/*.scss'])
-    .pipe(plumber({
-      errorHandler: function (error) {
-        console.log(error.message);
-        this.emit('end');
-    }}))
+   ,html: {
+    src: '*.html',
+   }
+};
+
+function style() {
+  return (
+    gulp
+    .src(paths.styles.src)
+    .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest('css/'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(minifycss())
-    .pipe(gulp.dest('css/'))
-    .pipe(browserSync.reload({stream:true}))
-});
+    .on("error", sass.logError)
+    .pipe(postcss([autoprefixer()]))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(paths.styles.dest))
+    // Add browsersync stream pipe after compilation
+    .pipe(browserSync.stream())
+  );
+}
+exports.style = style;
 
+function reload() {
+    browserSync.reload();
+}
 
-gulp.task('default', ['browser-sync'], function(){
-  gulp.watch("scss/**/*.scss", ['styles']);
-  gulp.watch("*.html", ['bs-reload']);
-});
+function watch() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+
+    gulp.watch(paths.styles.src, style);
+    gulp.watch("*").on('change', browserSync.reload);
+    // We should tell gulp which files to watch to trigger the reload
+    // This can be html or whatever you're using to develop your website
+    // Note -- you can obviously add the path to the Paths object
+}
+exports.watch = watch

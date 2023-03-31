@@ -1,45 +1,35 @@
-@import 'base/fonts';
-@import 'base/normalize';
-@import 'bootstrap/bootstrap';
+// Frameworks
+// @import '/fonts/fonts/';
+@import 'vendor/bootstrap/bootstrap';
+// @import 'vendor/swiper/swiper';
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono&display=swap');
 
-// Libraries
-@import 'https://unpkg.com/aos@latest/dist/aos.css';
-[data-aos=fade-up] {
-    transform: translate3d(0,20px,0);
-}
-
-//General
+@import "base/mixins";
 @import 'base/variables';
-@import 'base/global';
+
 @import 'base/spacing';
+@import 'base/fonts';
+@import 'base/root';
+@import 'base/animation';
+@import 'base/type';
+@import 'base/svg';
 
-// Base Components
-@import "components/text";
-@import "components/loader";
-@import "components/header";
-@import "components/footer";
-@import "components/sections";
-@import "components/titles";
-@import "components/buttons";
-@import "components/list";
-// @import "components/slider";
-@import "components/modal";
-@import "components/menu";
-@import "components/inputs";
-@import "components/select";
-@import "components/accordion";
+// Import Components
+@import 'components/footer';
+@import 'components/header';
+@import 'components/loader';
+@import 'components/menu';
+@import 'components/icons';
+@import 'components/form';
+@import 'components/modal';
+@import 'components/buttons';
 
-// Layouts
-@import "layouts/error";
-@import "layouts/splash";
-@import "layouts/home";
-@import "layouts/clients";
-@import "layouts/team";
-@import "layouts/careers";
-@import "layouts/work";
-@import "layouts/press";
 
+// Import Layouts
+@import 'layouts/home';
+// @import 'layouts/splash';
+@import 'layouts/error';
 
 // Plugins
 @import 'plugins/utilities';
-// @import 'plugins/dev';
+//@import 'plugins/dev';

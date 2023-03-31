@@ -1,29 +1,7 @@
-@font-face {
-    font-family: 'NHaasGroteskTXPro-75Bd';
-    src: url('../fonts/38B283_1_0.eot'); 
-    src: url('../fonts/38B283_1_0.eot?#iefix') format('embedded-opentype'), 
-        url('../fonts/38B283_1_0.woff2') format('woff2'), 
-        url('../fonts/38B283_1_0.woff') format('woff'), 
-        url('../fonts/38B283_1_0.ttf')  format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Helvetica';
-    src: url('../fonts/38B283_0_0.eot'); 
-    src: url('../fonts/38B283_0_0.eot?#iefix') format('embedded-opentype'), 
-        url('../fonts/38B283_0_0.woff2') format('woff2'), 
-        url('../fonts/38B283_0_0.woff') format('woff'), 
-        url('../fonts/38B283_0_0.ttf')  format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
 // Typography Options
-$font-title: 'NHaasGroteskTXPro-75Bd', sans-serif;
-$font-body: 'Helvetica', Helvetica, sans-serif;
-
+$font-title: 'Mrs Saint Delafield', cursive;
+$font-body: 'PitchSansRegular', monospace;
+$font-link: 'PitchSansBold', monospace;
 
 //TYPOGRAPHY 
 @mixin font($font:$font-title, $weight:normal, $style: normal, $size:16px, $spacing:-0.08px, $line-height:20px) {
@@ -33,4 +11,23 @@ $font-body: 'Helvetica', Helvetica, sans-serif;
     font-size: $size;
     letter-spacing: $spacing;
     line-height: $line-height;
+}
+
+
+@font-face {
+    font-family: 'PitchSansRegular';
+    src: url('/fonts/PitchSans-Regular.woff2') format('woff2'),
+        url('/fonts/PitchSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PitchSansBold';
+    src: url('/fonts/PitchSans-Bold.woff2') format('woff2'),
+        url('/fonts/PitchSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
