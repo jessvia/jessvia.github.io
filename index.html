@@ -321,11 +321,10 @@
             <img width="500" src="/img/highlight-l.png" class="mt--50" alt="">
           </div>
 
-          <form class="mt-50 mx-auto" method="POST" name="RSVP" id="rsvp" action="index.html">
-            <div class="response"></div>
+          <form class="mt-50 mx-auto"  action="https://getform.io/f/eab7710d-160f-493d-984c-5ba8a0a4c646" method="POST" name="RSVP">
             <fieldset class="d-block input-group">
               <label class="d-block" for="Name">Nombre y Apellidos</label>
-              <input type="text" name="Name" placeholder="Nombre y Apellidos" required>
+              <input  type="text" name="Name" placeholder="Nombre y Apellidos" required>
             </fieldset>
 
             <fieldset class="mt-30">
@@ -496,30 +495,6 @@
       });
 
       timer.startTimer(); 
-
-      $(document).ready(function(){
-          $('#rsvp').submit(function(e){
-              e.preventDefault();
-              $('button').prop('disabled', true);
-              
-              $form = $(this);
-              $.ajax({
-                  type: "POST",
-                  url: 'js/ajax_submit.php',
-                  data: 'contact_submit=1&'+$form.serialize(),
-                  dataType: 'json',
-                  success: function(response){
-                      if(response.status == 1){
-                          $('#rsvp')[0].reset();
-                          $('.response').html('<div class="alert alert-success">'+response.message+'</div>');
-                      }else{
-                          $('.response').html('<div class="alert alert-danger">'+response.message+'</div>');
-                      }
-                      $('button').prop('disabled', false);
-                  }
-              });
-          });
-      });
     </script>
 
 
