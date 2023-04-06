@@ -7,15 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Nuestra Boda</title>
+    <title>S&A</title>
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="shortcut icon" type="image/svg+xml" href="favicon-in.png" />
-    <meta name="description" content="S&A">
+    <meta name="description" content="Te invitamos a nuestra boda">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> 
+
+    <meta name="og:title" property="og:title" content="S&A Nuestra Boda">
+    <meta property="og:description"        content="Te Invitamos a Nuestra Boda" />
+    <meta property="og:image" width="600" height="600"       content="https://www.dropbox.com/s/3477kp4kibhzyy5/Boda.jpeg?dl=0" />
   </head>
 
   <body>
@@ -23,6 +27,28 @@
     <div class="loader-component"></div>
 
     <main class="site-home">
+      <div class="music-box">
+        <button  class="btn btn-play-music play">
+          <i class="fa fa-play"> <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 86">
+            <path d="M42.673 81.346c21.359 0 38.673-17.314 38.673-38.673C81.346 21.315 64.032 4 42.673 4 21.315 4 4 21.315 4 42.673c0 21.359 17.315 38.673 38.673 38.673Z" stroke="#F6F6EF" stroke-width="7.735" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="m34.938 27.204 23.204 15.47-23.204 15.468V27.204Z" stroke="#F6F6EF" stroke-width="7.735" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg></i>
+          <i class="fa fa-pause"> 
+            <svg fill="none" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 86">
+              <path d="M42.673 81.346c21.359 0 38.673-17.314 38.673-38.673C81.346 21.315 64.032 4 42.673 4 21.315 4 4 21.315 4 42.673c0 21.359 17.315 38.673 38.673 38.673ZM34.938 54.275V31.071M50.408 54.275V31.071" stroke="#F6F6EF" stroke-width="7.735" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </i>
+        </button>
+        <br>
+        <audio id="audio" controls="controls" autostart="0" autostart="false">
+          <source src="/Christina Perri - A Thousand Years.mp3" type="audio/mp3" />
+        </audio>
+      </div>
+
+      <!-- <audio controls autoplay loop volume="0.1" id="myaudio">
+        <source src="/Christina Perri - A Thousand Years.mp3" type="audio/ogg">
+        <embed src="/Christina Perri - A Thousand Years.mp3" autostart="true" loop="true" hidden="true" volume="0.1"> 
+      </audio> -->
     <section>
       <div class="">
         <div class="swiper">
@@ -467,6 +493,27 @@
               }, 1000);
           }
       }
+
+      var audio = document.getElementById('audio');
+      var isPlaying = false;
+      audio.volume = 0.1;
+
+      $('.btn-play-music').click(function(){
+          $(this).toggleClass('pause');
+          $(this).parent('.music-box').toggleClass('playing');
+          // $(this).find('.fa').toggleClass('fa-pause');
+          if (isPlaying) {
+            audio.pause()
+          } else {
+            audio.play();
+          }
+      });
+      audio.onplaying = function() {
+        isPlaying = true;
+      };
+      audio.onpause = function() {
+        isPlaying = false;
+      };
   
 
       // $(window).scroll(function() {

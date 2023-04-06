@@ -116,3 +116,51 @@ canvas {
     max-width: 1080px;
   }
 }
+
+.music-box{
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  transition:all .3s;
+  width: 40px;
+  height: 40px;
+  z-index: 9;
+  audio{
+    display:none;
+  }
+  .btn{
+    padding:20px;
+    // margin:100px auto 50px;
+    display:block;
+    cursor:pointer;
+    border:none;
+    border-radius:10px 0px;
+    transition:all .3s;
+    &.play{
+      background:$primary-400;
+
+      svg path{
+        stroke: $primary-100;
+      }
+      .fa-pause {
+        display: none;
+      }
+    }
+    &.pause{
+      background:$primary-100;
+      transform:rotate(90deg);
+      .fa-play {
+        display: none;
+      }
+      svg path{
+        stroke: $primary-400;
+      }
+      .fa-pause {
+        display: block;
+        transform:rotate(90deg);
+      }
+    }
+  }
+}
