@@ -1,0 +1,107 @@
+// .link {
+//     &__socials {
+//         text-decoration: underline;
+//         transition: color 0.4s;
+
+//         span {
+//             text-decoration: underline;
+//         }
+
+//         &:hover > *:nth-of-type(5n+1) {
+//             -webkit-animation-delay: -2s;
+//             animation-delay: -2s;
+//         }
+//         &:hover > *:nth-of-type(5n+2) {
+//             -webkit-animation-delay: -1.6s;
+//             animation-delay: -1.6s;
+//         }
+//         &:hover > *:nth-of-type(5n+3) {
+//             -webkit-animation-delay: -1.2s;
+//             animation-delay: -1.2s;
+//         }
+//         &:hover > *:nth-of-type(5n+4) {
+//             -webkit-animation-delay: -.8s;
+//             animation-delay: -.8s;
+//         }
+//         &:hover > *:nth-of-type(5n+5) {
+//             -webkit-animation-delay: -.4s;
+//             animation-delay: -.4s;
+//         }
+
+//         &:hover span {
+//             -webkit-animation: color 2.4s step-end infinite;
+//             animation: color 2.4s step-end infinite;
+//             text-decoration: none;
+//         }
+//     }
+// }
+
+.btn {
+    &__primary {
+        background-color: $primary-300;
+        border-radius: 100px;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        color: $night;
+        width: fit-content;
+        
+        
+        svg {
+            transform: rotate(0px);
+            transition: all 200ms ease-in-out;
+        }
+
+        &:hover {
+            color: $night;
+
+            svg {
+                transform: rotate(45deg);
+            }
+        }
+
+        @media(max-width: 767px) {
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+         }
+    }
+}
+
+
+.tag-cat {
+    border-radius: 40px;
+    padding: 4px 13px;
+    border:1px solid white;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+@keyframes color {
+    0% {
+        fill: $primary-100;
+        color: $primary-100;
+    }
+  
+    20% {
+        fill: $primary-200;
+        color: $primary-200;
+    }
+    40% {
+        fill:white;
+        color:white;
+    }
+    60% {
+        fill:  $primary-400;
+        color:  $primary-400;
+    }
+    80% {
+        fill: $red;
+        color: $red;
+    }
+    100% {
+      fill: $primary-300;
+      color: $primary-300;
+    }
+  }
+

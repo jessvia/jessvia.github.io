@@ -1,0 +1,14 @@
+// Typography Options
+$font-title: 'Public Sans', sans-serif;
+$font-body: 'Roboto Mono', monospace;
+
+
+//TYPOGRAPHY 
+@mixin font($font:$font-title, $weight:normal, $style: normal, $size:16px, $spacing:-0.08px, $line-height:20px) {
+    font-family: $font;
+    font-weight: $weight;
+    font-style : $style;
+    font-size: $size;
+    letter-spacing: $spacing;
+    line-height: $line-height;
+}

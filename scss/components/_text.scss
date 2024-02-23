@@ -1,0 +1,61 @@
+%h1,
+.h1,
+h1 {
+  @include font($font-title, 900,normal, 8rem, -4.4px, 9rem);
+  @media(min-width: 1300px) {
+    @include font($font-title, 900,normal, 10rem, -5.93px, 11rem);
+  }
+  @media(max-width: 991px) {
+    @include font($font-title, 900,normal, 6rem, -2.87px, 7rem);
+  }
+  @media(max-width: 767px) {
+    @include font($font-title, 900,normal, 4rem, -0.93px, 5rem);
+  }
+}
+
+h1 span {
+  position: relative;
+  display: inline-block;
+}
+
+
+// %h2,
+// .h2,
+// h2 {
+//   @include font($font-title, 500,normal, 15px, -0.3px, 20px);
+// }
+
+// %h3,
+// .h3,
+// h3 {
+//   @include font($font-title, 500,normal, 40px, -2px, 45px);
+//   color:white;
+//   @media(max-width: 992px) {
+//     @include font($font-title, 500,normal, 35px, -1.75px, 40px);
+//   }
+//   @media(max-width: 767px) {
+//     @include font($font-title, 500,normal, 28px, -0.93px, 31px);
+//   }
+// }
+
+// %h4,
+// .h4,
+// h4 {
+//   @include font($font-title, 500,normal, 15px, -0.3px, 20px);
+//   color:white;
+//   @media(max-width: 767px) {
+//     @include font($font-title, 500,normal, 13px, -0.26px, 15px);
+//   }
+// }
+
+// %text-numeral,
+// .text-numeral {
+//   @include font($font-title, 500,normal, 132px, -7.7px, 98px);
+//   color:white;
+//   @media(max-width: 992px) {
+//     @include font($font-title, 500,normal, 82px, -4.78px, 70px);
+//   }
+//   @media(max-width: 767px) {
+//     @include font($font-title, 500,normal, 60px, -3.5px, 60px);
+//   }
+// }

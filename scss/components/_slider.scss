@@ -1,0 +1,62 @@
+// .swiper-pagination {
+//   position: relative;
+// }
+
+// .swiper-pagination-bullet {
+//   width     : 7px;
+//   height    : 7px;
+//   opacity   : 1;
+//   border    : 1px solid $orange;
+//   background: transparent;
+// }
+
+// .swiper-pagination-bullet-active {
+//   background: $orange;
+//   border    : 1px solid $orange;
+// }
+
+// .swiper-button-next,
+// .swiper-button-prev {
+//   background-image: url("../img/svg/arrow-right.svg");
+// }
+
+// .swiper-button-prev {
+//   transform: rotate(180deg);
+// }
+
+// .swiper-vertical {
+//   overflow: visible;
+
+//   .swiper-pagination {
+//     position       : absolute;
+//     top            : 50%;
+//     left           : 100%;
+//     transform      : translate(0,-50%);
+//     width          : fit-content;
+//     height         : fit-content;
+//     display        : flex;
+//     align-items    : flex-start;
+//     justify-content: flex-start;
+//     flex-direction : column;
+
+//     .swiper-pagination-bullet {
+//       border: 1px solid $white;
+//       margin: 5px;
+
+//       &.swiper-pagination-bullet-active {
+//         background: $white;
+//       }
+//     }
+//   }
+//   @media(max-width: 767px) {
+//     .swiper-pagination {
+//       width          : 100%;
+//       position       : static;
+//       align-items    : center;
+//       justify-content: center;
+//       flex-direction : row;
+//       transform      : none;
+//       margin-bottom  : 25px;
+//     }
+//   }
+// }

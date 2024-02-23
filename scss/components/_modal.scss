@@ -1,0 +1,107 @@
+// .mobile__filter {
+//   display : none;
+//   position: fixed;
+//   top     : 0;
+//   left    : 0;
+//   width   : 100%;
+//   height  : 100%;
+//   z-index : 1050;
+//   background-color: $black;
+//   padding: 0 15px;
+  
+//   &.is-open {
+//     display: block;
+//   }
+
+//   .btn-close {
+//     cursor  : pointer;
+//     position: absolute;
+//     top     : 0;
+//     right   : 0;
+//     margin  : 20px 15px 20px 20px;
+//     z-index : 10;
+//     height: 20px;
+//     width: 20px;
+
+//     span{
+//       background-color: rgba(white, 0);
+//       transition-delay: 0s;
+//       right:0;
+//     }
+
+//     &:before, &:after{
+//         margin-top: 0;
+//         transition-delay: 0s, 0.4s, 0.4s;
+//         right:0;
+//         @extend %menu-dash;
+//         content:'';
+//     }
+
+//     &:before{
+//         transform: rotate(45deg);
+//     }
+
+//     &:after{
+//         transform: rotate(-45deg);
+//     }
+//   }
+
+//   #filter {
+//     width: 100%;
+//     border-bottom:$border-b;
+//     border-bottom-color: white;
+//     padding-bottom: 5px;
+//   }
+
+//   .accordion__filter {
+//     border-bottom:$border-b;
+//     padding-bottom: 5px;
+//     position: relative;
+
+//     span:after {
+//       position: absolute;
+//       right: 0px;
+//       top:5px;
+//     }
+//   }
+
+//   .accordion__content {
+//     li + li {
+//       margin-top: 10px;
+//     }
+//   }
+// }
+
+// .mobile__filter.is-open {
+//   animation: mmfadeIn .4s cubic-bezier(0.0, 0.0, 0.2, 1);
+// }
+
+
+// .mobile__filter {
+//   animation: mmfadeOut .4s cubic-bezier(0.0, 0.0, 0.2, 1);
+// }
+
+// .mobile__filter.is-open {
+//   will-change: transform;
+// }
+
+// @keyframes mmfadeIn {
+//   from {
+//     opacity: 0;
+//   }
+
+//   to {
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes mmfadeOut {
+//   from {
+//     opacity: 1;
+//   }
+
+//   to {
+//     opacity: 0;
+//   }
+// }
+

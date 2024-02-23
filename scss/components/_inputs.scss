@@ -1,0 +1,80 @@
+// input,
+// textarea {
+//   border-color: transparent;
+//   border-bottom       : 1px solid $dark-gray;
+//   background   : transparent;
+//   width        : 100%;
+//   border-radius: 2px;
+//   margin-bottom: 0px;
+//   border-radius: 0;
+//   box-shadow: none;
+// }
+
+// input:focus, textarea:focus {
+//   box-shadow: none;
+//   border-color: transparent;
+//   border-bottom-color: white;
+//   outline: none;
+// }
+
+// label {
+//   font-size: 12px;
+//   margin: 0;
+//   color:white;
+//   display: block;
+//   opacity: 1;
+//   -webkit-transition: .333s ease top, .333s ease opacity;
+//   transition: .333s ease top, .333s ease opacity;
+// }
+
+// .js-hide-label {
+//   opacity: 0;   
+// }
+// .js-unhighlight-label {
+//   color:white; 
+// }
+
+// .input-error{
+//   display: none;
+//   color: red;
+
+//   &.active {
+//     display: block;
+//   }
+// }
+
+// .accordion__content {
+//   ul li{
+//     display: flex;
+//   }
+
+//   label {
+//     @include font($font-body, 500,normal, 14px, 0px, 20px);
+//     color:#B3B3B3;
+//     cursor: pointer;
+//   }
+
+//   input {
+//     opacity:0;
+//     width: 0;
+//     height: 0;
+//     display: flex;
+//   }
+
+//   input[type=checkbox]:checked ~ label{
+//     color:white;
+//   }
+// } 
+
+
+// @-webkit-keyframes autofill {
+//   to {
+//       color: white;
+//       background: transparent;
+//   }
+// }
+
+// input:-webkit-autofill {
+//   animation-name: autofill;
+//   animation-fill-mode: both;
+// }
